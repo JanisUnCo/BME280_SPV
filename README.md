@@ -1,7 +1,6 @@
 # Universalais riks dažām vajadzībām ar BME280 un raspberry pi 3
 ## Apraksts
-     Šis brīnums radās izmantojot dažādas komponentes un vadus. Ar šo iekārtu var veikt dažādus aprēķinus, izmantojot sensora BME280 piedāvātos mērījumus un fizikas formulas. Tā darbības
-princips ir vienkārš - savienojoties ar RPI 3 un tajā palaižot kodu1.py, ir iespēja izvēlēties darbību. Viena no tām ir vienkārša spēlēšanas ar pogām, otra - kalkulātors ar kuru var aprēķināt dažādas darbības izmantojot BME280 iegūtos datus.
+Šis brīnums radās izmantojot dažādas komponentes un vadus. Ar šo iekārtu var veikt dažādus aprēķinus, izmantojot sensora BME280 piedāvātos mērījumus un fizikas formulas. Tā darbības princips ir vienkāršs - savienojoties ar RPI 3 un tajā palaižot kodu1.py, ir iespēja izvēlēties darbību. Viena no tām ir vienkārša spēlēšanas ar pogām, otra - kalkulātors ar kuru var aprēķināt dažādas darbības izmantojot BME280 iegūtos datus.
 ## Shēma
 ![Shema](https://raw.githubusercontent.com/JanisUnCo/BME280_SPV/master/bildes/Screenshot_5.png)
 
@@ -17,11 +16,11 @@ princips ir vienkārš - savienojoties ar RPI 3 un tajā palaižot kodu1.py, ir 
 Iekārta darbojas pavisam vienkārši. Kad teminālī uz RPI palaiž skriptu, tas uzdod 1. jautājumu, kur izvēlēties darbību - spēlēties ar pogām vai izmantot specializēto kalkulātoru. Ja izvēlas darbību ar pogām, tad spiežot attiecīgās pogas tiks veiktas attiecīgās darbības un rādījumi termināli, kā arī dzīvē, uz LED diodēm. Ja izvēlas darbību ar kalkulatoru, ir iespējams izvēlēties 3 tā veidus, kur ievadot nepieciešamos datus, programma aprēķinās gāzes masu telpā un tās ātrumu, izmantojot reālos spidiena un temperatūras rādījumus, kurus iegūst BME280.
 
 ## Saites
-https://github.com/JanisUnCo/Hangman_Mehatronika_Kiploks
-https://buildmedia.readthedocs.org/media/pdf/smbus2/latest/smbus2.pdf
-Izmantotās RPI bibliotēkas:
-smbus2
-bme280
-time
-random
-math
+1. https://github.com/JanisUnCo/Hangman_Mehatronika_Kiploks
+2. https://buildmedia.readthedocs.org/media/pdf/smbus2/latest/smbus2.pdf
+3.Izmantotās RPI bibliotēkas:
+-smbus2
+-bme280
+-time
+-random
+-math
