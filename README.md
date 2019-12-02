@@ -18,9 +18,9 @@ Iekārta darbojas pavisam vienkārši. Kad teminālī uz RPI palaiž skriptu, ta
 ## Saites
 1. https://github.com/JanisUnCo/Hangman_Mehatronika_Kiploks
 2. https://buildmedia.readthedocs.org/media/pdf/smbus2/latest/smbus2.pdf
-3.Izmantotās RPI bibliotēkas:
--smbus2
--bme280
--time
--random
--math
+3. Izmantotās RPI bibliotēkas:
+    - smbus2
+    - bme280
+    - time
+    - random
+    - math
