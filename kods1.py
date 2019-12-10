@@ -7,6 +7,23 @@ import math
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 #importe bibliotekas
+#sagatavo BME280 datu lasisanai
+port = 1
+address = 0x76
+bus = smbus2.SMBus(port)
+calibration_params = bme280.load_calibration_params(bus, address)
+data = bme280.sample(bus, address, calibration_params)
+#Define pogu atrasanas vietu un diozu uz RPI
+GPIO.setup(13,GPIO.OUT) #lilla
+GPIO.setup(19,GPIO.OUT) #Balts
+GPIO.setup(26,GPIO.OUT) #Peleks
+p1 = 16
+p2 = 20
+p3 = 21
+#define pogas, ka pogas
+GPIO.setup(p1, GPIO.IN, GPIO.PUD_UP)
+GPIO.setup(p2, GPIO.IN, GPIO.PUD_UP)
+GPIO.setup(p3, GPIO.IN, GPIO.PUD_UP)
 
 print("Sviecinats saja profesionalaja skripta, kas tev palidzes izmantot BMW280")
 intro()
@@ -37,23 +54,6 @@ def intro():
         intro()
 
 def sensinfo():
-    #sagatavo BME280 datu lasisanai
-    port = 1
-    address = 0x76
-    bus = smbus2.SMBus(port)
-    calibration_params = bme280.load_calibration_params(bus, address)
-    data = bme280.sample(bus, address, calibration_params)
-    #Define pogu atrasanas vietu un diozu uz RPI
-    GPIO.setup(13,GPIO.OUT) #lilla
-    GPIO.setup(19,GPIO.OUT) #Balts
-    GPIO.setup(26,GPIO.OUT) #Peleks
-    p1 = 16
-    p2 = 20
-    p3 = 21
-    #define pogas, ka pogas
-    GPIO.setup(p1, GPIO.IN, GPIO.PUD_UP)
-    GPIO.setup(p2, GPIO.IN, GPIO.PUD_UP)
-    GPIO.setup(p3, GPIO.IN, GPIO.PUD_UP)
     try:
         while True:
             if GPIO.input(16) == GPIO.LOW:
