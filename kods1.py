@@ -137,9 +137,9 @@ Darbiba: """))
                 mass1 = (Mol1 * data.pressure * Vol1) / (R * (data.temperature + 273))
                 #aprekina gazes masu telpa izmantojot darbibu = (gazes molmasa * iegutais spiediesn * tilpums) / (bolcmana konstante * (ieguta temperatura + 273))
                 print("Gazes masa telpa = ", mass1, " kg.")
-                vv21 = math.sqrt(3 * R * ((data.temperature + 273) / Mol1)
+                vv21 = math.sqrt(3 * R * ((data.temperature + 273) / Mol1))
+                print("Gazes atrums telpa ir ", vv21, " m/s")
                 #aprekina gazes atrumu telpa ar darbibu = kvadratsakne no (3 * bolcmana konstante * (ieguta temperatura + 273) / gazes molmasu)
-                print("Gazes atrums telpa ir", vv21, " m/s")
                 kalk()
 
             if (kv1 == 2):
